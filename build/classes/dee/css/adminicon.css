@@ -1,0 +1,24 @@
+
+.glyph-icon{
+    -fx-fill: #a0a2ab;
+}
+
+.btns{
+    -fx-background-color: transparent;
+}
+
+.btns:hover{
+    -fx-background-color: black ;
+   
+}
+
+.btn{
+    -fx-background-color: transparent;
+}
+
+.btn:hover{
+    -fx-background-color: #f12d2d ;
+   
+}
+
+

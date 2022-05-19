@@ -1,0 +1,21 @@
+.glyph-icon{
+    -fx-fill: #a0a2ab;
+}
+
+.jfx-button:hover{
+    -fx-text-fill: whitesmoke;
+}
+
+.error-message {
+    -fx-font-family: Century Gothic;
+    -fx-text-fill: #ff3333;
+    -fx-font-size: 18;
+}
+
+.text-field {
+
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18;
+
+}
+

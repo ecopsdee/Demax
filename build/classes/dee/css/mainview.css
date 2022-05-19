@@ -1,0 +1,4 @@
+.close-button:hover {
+    -fx-background-color:   #ff3333;
+    -fx-text-fill: white;
+}

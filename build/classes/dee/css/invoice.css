@@ -1,0 +1,17 @@
+.jfx-button{
+    -fx-background-color:   #e3e7e3;
+}
+.jfx-button:hover{
+    -fx-background-color:  #9bd4f4;
+    -fx-text-fill: white;
+}
+
+.close-button:hover {
+    -fx-background-color:   #ff3333;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color:  #0096D6;
+    -fx-text-fill: white;
+}

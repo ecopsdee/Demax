@@ -1,0 +1,11 @@
+
+
+.glyph-icon:hover{
+    -fx-fill: red;
+    
+}
+
+.glyph-icon{
+    -fx-fill: #a0a2ab;
+    
+}

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="invoicepane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="644.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dee.controllers.SalesReviewController">
+   <children>
+      <HBox prefHeight="0.0" prefWidth="1258.0" style="-fx-background-color: #778899;" stylesheets="@../css/addemployee.css">
+         <children>
+            <Label contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #778989;" text="Sales Review" textAlignment="JUSTIFY" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <StackPane alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="1248.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <MaterialDesignIconView fx:id="close" fill="WHITE" glyphName="WINDOW_CLOSE" onMouseClicked="#closeaction" size="30" />
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="315.0" prefWidth="1268.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="257.0" prefWidth="263.0" style="-fx-background-color: #D3D3D3;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="58.0" prefWidth="1268.0" spacing="5.0">
+                     <children>
+                        <TilePane alignment="CENTER" prefHeight="62.0" prefWidth="356.0">
+                           <children>
+                              <Label text="Invoice No:" />
+                              <JFXComboBox fx:id="invoice" focusColor="WHITE" onAction="#getdetails" prefHeight="29.0" prefWidth="141.0" />
+                           </children>
+                        </TilePane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="68.0" prefHeight="40.0" prefWidth="247.0" spacing="5.0">
+                     <children>
+                        <TilePane alignment="CENTER" prefHeight="58.0" prefWidth="293.0">
+                           <children>
+                              <Label text="Cust ID:" />
+                              <Label fx:id="custID" alignment="CENTER" prefHeight="29.0" prefWidth="141.0" style="-fx-background-color: #778989;" textFill="WHITE" />
+                           </children>
+                        </TilePane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="50.0" prefHeight="40.0" prefWidth="247.0" spacing="5.0">
+                     <children>
+                        <TilePane alignment="CENTER" prefHeight="58.0" prefWidth="297.0">
+                           <children>
+                              <Label text="Name:" />
+                              <Label fx:id="name" alignment="CENTER" prefHeight="29.0" prefWidth="141.0" style="-fx-background-color: #778989;" textFill="WHITE" />
+                           </children>
+                        </TilePane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="90.0" prefHeight="40.0" prefWidth="247.0" spacing="5.0">
+                     <children>
+                        <TilePane alignment="CENTER" prefHeight="58.0" prefWidth="320.0">
+                           <children>
+                              <Label text="Location:" />
+                              <Label fx:id="location" alignment="CENTER" prefHeight="29.0" prefWidth="141.0" style="-fx-background-color: #778989;" textFill="WHITE" />
+                           </children>
+                        </TilePane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="170.0" prefHeight="40.0" prefWidth="247.0" spacing="5.0">
+                     <children>
+                        <TilePane alignment="CENTER" prefHeight="58.0" prefWidth="289.0">
+                           <children>
+                              <Label text="Date:" />
+                              <Label fx:id="date" prefHeight="29.0" prefWidth="141.0" style="-fx-background-color: #778989;" textFill="WHITE" />
+                           </children>
+                        </TilePane>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="Returntable" prefHeight="287.0" prefWidth="720.0" HBox.hgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="productcol" prefWidth="75.0" text="Description" />
+                  <TableColumn fx:id="qtycol" prefWidth="75.0" text="QTY" />
+                  <TableColumn fx:id="unitpricecol" prefWidth="75.0" text="Unit Price" />
+                  <TableColumn fx:id="tootalcol" prefWidth="75.0" text="Total Price" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox id="HBox" alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="1268.0" spacing="5.0" style="-fx-background-color: #C0C0C0;">
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="899.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="173.0" spacing="20.0">
+                     <HBox.margin>
+                        <Insets right="60.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label text="Total :" textFill="#184380">
+                           <font>
+                              <Font name="Cambria Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalqty" prefHeight="17.0" prefWidth="108.0" style="-fx-background-color: #C0C0C0;" textFill="#423f43" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="462.0" layoutY="15.0" prefHeight="25.0" prefWidth="174.0" spacing="20.0">
+                     <children>
+                        <Label text="Balance" textFill="#184380">
+                           <font>
+                              <Font name="Cambria Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="balance" prefHeight="17.0" prefWidth="108.0" style="-fx-background-color: #C0C0C0;" textFill="#423f43" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="_Save" layoutX="857.0" layoutY="13.0" onAction="#Save" stylesheets="@../css/invoice.css" text="Save">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="_refresh" layoutX="857.0" layoutY="13.0" onAction="#refresh" stylesheets="@../css/invoice.css" text="Delete">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="_clear" layoutX="802.0" layoutY="13.0" onAction="#clear" stylesheets="@../css/invoice.css" text="Clear">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

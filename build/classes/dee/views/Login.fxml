@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="552.0" prefWidth="896.0" style="-fx-background-color: #151928;" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dee.controllers.LoginController">
+   <children>
+      <VBox prefHeight="649.0" prefWidth="500.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_RIGHT" spacing="9.0">
+               <children>
+                  <VBox stylesheets="@../css/mini.css">
+                     <children>
+                        <MaterialDesignIconView fx:id="minimize" glyphName="WINDOW_MINIMIZE" onMouseClicked="#minusAction" size="30" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="30.0" prefWidth="38.0" stylesheets="@../css/close.css">
+                     <children>
+                        <MaterialDesignIconView fx:id="close" glyphName="WINDOW_CLOSE" onMouseClicked="#closeAction" size="30" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets right="10.0" top="5.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" stylesheets="@../css/homeicon.css">
+                     <children>
+                        <MaterialDesignIconView glyphName="COPYRIGHT" size="150" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="18.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="USER" size="25" />
+                        <JFXTextField fx:id="usernameField" focusColor="#2196f3" labelFloat="true" onAction="#loginAction" prefHeight="25.0" prefWidth="282.0" promptText="Username">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="210.0" prefHeight="79.0" prefWidth="1050.0" spacing="18.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="KEY" size="25" />
+                        <JFXPasswordField fx:id="passwordField" focusColor="#2196f3" labelFloat="true" onAction="#loginAction" prefHeight="30.0" prefWidth="287.0" promptText="Password">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="310.0" prefHeight="79.0" prefWidth="1050.0" spacing="100.0">
+                     <children>
+                        <JFXCheckBox checkedColor="#2196f3" prefHeight="31.0" prefWidth="132.0" text="Remember me" textFill="#a0a2ab" unCheckedColor="#2196f3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXButton fx:id="_loginaction" onAction="#loginAction" prefHeight="37.0" prefWidth="97.0" style="-fx-background-radius: 10; -fx-background-color: #2196f3;" text="Login">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="389.0" prefHeight="79.0" prefWidth="1050.0" spacing="100.0">
+                     <children>
+                        <Label fx:id="errorLabel" styleClass="error-message" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
