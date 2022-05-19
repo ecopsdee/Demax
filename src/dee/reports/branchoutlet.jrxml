@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a90cf637-c508-4ab2-857f-24198165c99a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="branch" class="java.lang.String"/>
+	<parameter name="fromdate" class="java.lang.String"/>
+	<parameter name="todate" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="employee" class="java.lang.String"/>
+	<parameter name="logoa" class="java.lang.Object"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="pname" class="java.lang.String"/>
+	<field name="qty" class="java.lang.Integer"/>
+	<field name="uprice" class="java.lang.Integer"/>
+	<field name="tprice" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="177" splitType="Stretch">
+			<image scaleImage="RetainShape">
+				<reportElement x="0" y="0" width="92" height="88" uuid="efc457df-d64f-4a85-ac7a-1b2378faf4d2"/>
+				<imageExpression><![CDATA[$P{logoa}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="372" y="88" width="183" height="59" uuid="fe414c03-15c8-4607-8bf7-f4ce26684c58"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Branch Office:
+Zone 5, No. 118
+Motorcycle Main Market
+Nnewi Anambra State
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="463" height="50" uuid="909eae2a-7d9d-4028-a89a-2f62f8ce7e60"/>
+				<box>
+					<pen lineWidth="3.25" lineStyle="Solid"/>
+					<topPen lineWidth="3.25" lineStyle="Solid"/>
+					<leftPen lineWidth="3.25" lineStyle="Solid"/>
+					<bottomPen lineWidth="3.25" lineStyle="Solid"/>
+					<rightPen lineWidth="3.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="23" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUNCHO & COMPANY (NIG.) LTD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="50" width="183" height="19" uuid="022d016b-4ba3-4fbb-81c5-c5048c2a8f62"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[TIN NO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="88" width="183" height="59" uuid="6018314c-31a4-4bc2-bd6f-d35f17664438"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Head Office:
+Hipo Plaza, Zone 16, No.148
+Motorcycle Main Market
+Nnewi Anambra State.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="147" width="76" height="26" uuid="1650b042-9491-4951-84f1-c23e98e44ea3"/>
+				<box>
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BRANCH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="69" width="462" height="19" uuid="557fced3-d109-4e37-af18-5bdd6261a740"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="50" width="183" height="19" uuid="87333e6b-7fe4-4e95-9f71-3a5bd271b745"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RC:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" uuid="074aafb8-1a5e-4b30-a67f-1d161871bde5"/>
+				<text><![CDATA[Branch:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="63" width="80" height="20" uuid="035cddc0-d9a6-45da-a6bb-35983248ad20"/>
+				<text><![CDATA[To Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="31" width="80" height="20" uuid="1bb82632-aa64-49bb-8e55-de15435f7b73"/>
+				<text><![CDATA[From Date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="20" uuid="fc91ffd7-232e-4257-9886-51c42595e153"/>
+				<textFieldExpression><![CDATA[$P{branch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="31" width="100" height="20" uuid="7d5858c4-606d-402f-a473-3498116f9337"/>
+				<textFieldExpression><![CDATA[$P{fromdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="63" width="100" height="20" uuid="c1a0a013-8818-4d8a-9cf4-514985e45498"/>
+				<textFieldExpression><![CDATA[$P{todate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="5505130f-4788-4de1-9f86-b502527a4da2"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="20" uuid="0a60a538-9146-42ff-8ef9-f33247c369ca"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="20" uuid="d4d6a6ac-595a-40aa-82eb-843afd818fae"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="20" uuid="1cb6758c-6882-41ba-9dee-d4a8abf7fe45"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIT PRICE (N)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="20" uuid="6b818495-5c97-483f-8a58-ea47d8a87cd2"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL (N)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="57e8bd2f-7358-47b1-8b2e-5a3af6320d30"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="f33b77d6-f801-449e-8b3f-f8efe383faa2"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="df2ca873-9e7b-4958-b305-1d08ec254330"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="c55cee76-2c1a-442a-9fd7-3f470ff37e39"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{uprice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="d7723136-5d53-4c08-8291-8383c197eca0"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tprice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="409" y="0" width="54" height="20" uuid="e31b07a9-e2fc-4f40-b5ae-f1799f48ea44"/>
+				<text><![CDATA[Printed by:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="20" uuid="008b4d5e-43c9-4e63-91d1-4ba72f869d13"/>
+				<text><![CDATA[Date Printed:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="0" width="131" height="20" uuid="b339e493-c203-4818-bcc2-c87672fcf6b3"/>
+				<text><![CDATA[cc: hipo ventures]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="63" y="0" width="100" height="20" uuid="d3421b99-900d-452b-b75d-f35f4d8c901e"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="92" height="20" uuid="18bbe0b8-510f-4481-b646-afa0d8747d12"/>
+				<textFieldExpression><![CDATA[$P{employee}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

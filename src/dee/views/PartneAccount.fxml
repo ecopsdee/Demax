@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="939.0" style="-fx-background-color: #a0a2ab;" stylesheets="@../css/generalstyle.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dee.controllers.PartneAccountController">
+   <children>
+      <HBox prefHeight="0.0" prefWidth="1258.0" style="-fx-background-color: #151928;">
+         <children>
+            <Label contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #151928;" text="Create Account" textAlignment="JUSTIFY" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <StackPane alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="1248.0" stylesheets="@../css/close.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <MaterialDesignIconView fx:id="close" glyphName="WINDOW_CLOSE" onMouseClicked="#closeAction" size="30" />
+               </children>
+            </StackPane>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="768.0" spacing="5.0">
+               <children>
+                  <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="47.0" text="Name:">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="firstname" focusColor="BLACK" prefHeight="25.0" prefWidth="124.0" promptText="Name" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="49.0" prefWidth="768.0" spacing="5.0">
+               <children>
+                  <Label minWidth="-Infinity" prefHeight="21.0" prefWidth="54.0" text="Location">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="origin" focusColor="BLACK" prefHeight="25.0" prefWidth="124.0" promptText="Location" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="142.0" prefHeight="58.0" prefWidth="989.0" spacing="5.0">
+               <children>
+                  <JFXButton fx:id="_generateAccount" minWidth="-Infinity" onAction="#generateAccount" prefHeight="5.0" prefWidth="112.0" stylesheets="@../css/invoice.css" text="Account">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="account" prefHeight="25.0" prefWidth="184.0" promptText="Account" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="768.0" spacing="5.0">
+               <children>
+                  <JFXButton fx:id="generatePartnerID" minWidth="-Infinity" onAction="#generatePartnerID" prefHeight="5.0" prefWidth="112.0" stylesheets="@../css/invoice.css" text=" CustomerID">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="partnerID" prefHeight="25.0" prefWidth="184.0" promptText="PartnerId" />
+               </children>
+            </HBox>
+            <TilePane alignment="CENTER" prefHeight="85.0" prefWidth="156.0">
+               <children>
+                  <JFXButton fx:id="_add" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" onAction="#add" prefHeight="27.0" prefWidth="97.0" style="-fx-background-radius: 10;" text="Save">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </TilePane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

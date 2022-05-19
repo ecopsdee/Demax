@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="be1d32be-c3d5-46b7-a065-cc7a49d8819d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="invoicenumber" class="java.lang.Integer"/>
+	<parameter name="total" class="java.lang.Integer"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="employee" class="java.lang.String"/>
+	<parameter name="logoa" class="java.lang.Object"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="productname" class="java.lang.String"/>
+	<field name="quantity" class="java.lang.Integer"/>
+	<field name="unitprice" class="java.lang.Integer"/>
+	<field name="totalprice" class="java.lang.Integer"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="profit" class="java.lang.Integer"/>
+	<field name="loss" class="java.lang.Integer"/>
+	<field name="totalprofit" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="176" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="88" width="183" height="59" uuid="73730e3c-d61c-4827-b833-a6812b0cd7ea"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Head Office:
+Hipo Plaza, Zone 16, No.148
+Motorcycle Main Market
+Nnewi Anambra State.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="88" width="183" height="59" uuid="8415a5e2-9f75-47fb-8112-0dee7942c1ce"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Branch Office:
+Zone 5, No. 118
+Motorcycle Main Market
+Nnewi Anambra State
+
+]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="92" height="88" uuid="6fce0abf-46f1-46cc-b094-3494daeb4bc9"/>
+				<imageExpression><![CDATA[$P{logoa}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="372" y="50" width="183" height="19" uuid="2748ff51-a46d-4649-93ea-ab9db0eb268c"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[TIN NO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="463" height="50" uuid="28b56715-33c9-4c19-ae5c-2a65ce0ba3f6"/>
+				<box>
+					<pen lineWidth="3.25" lineStyle="Solid"/>
+					<topPen lineWidth="3.25" lineStyle="Solid"/>
+					<leftPen lineWidth="3.25" lineStyle="Solid"/>
+					<bottomPen lineWidth="3.25" lineStyle="Solid"/>
+					<rightPen lineWidth="3.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="23" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUNCHO & COMPANY (NIG.) LTD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="50" width="183" height="19" uuid="760a8451-6c16-47d1-95e4-7cc511af3aa3"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="69" width="462" height="19" uuid="3ee05579-c701-49f3-a0f5-864985652e27"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="147" width="76" height="26" uuid="9d93b45d-4989-476e-8721-c37e316ef725"/>
+				<box>
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="47" height="20" uuid="1496ce45-3491-41c0-83cd-ec745e3c6ca4"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Invoice:  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="1" width="47" height="20" uuid="20597718-43a4-478c-ab0b-68d5f858400b"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Total(₦):  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="1" width="100" height="20" uuid="9dd47787-f088-46c0-aecd-05c30274e1a5"/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="0" width="100" height="20" uuid="7417a58d-05b0-463e-bc96-eeba82853a10"/>
+				<textFieldExpression><![CDATA[$P{invoicenumber}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="47" y="20" width="100" height="1" uuid="61443a0b-e12c-4554-a809-4b2f3410a04b"/>
+			</line>
+			<line>
+				<reportElement x="230" y="19" width="100" height="1" uuid="fa08aaf2-6d0d-42a2-9a78-d3a5bdcd167c"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="20" uuid="1ee33ced-50b4-47b7-9951-7ad9d54936ad"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="0" width="61" height="20" uuid="c1bc43d1-96bc-4061-9e2d-4923f2b6f729"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[INVOICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="0" width="53" height="20" uuid="2e28cda4-5adb-4e87-8c38-7e6aa22a37e5"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="0" width="43" height="20" uuid="3c5c886b-b7f7-4a77-b1e1-44b9024b1136"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="55" height="20" uuid="424f6e4c-a928-401e-8429-c8fe8f9e4821"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIT (₦)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="55" height="20" uuid="b2aa2e6b-323b-4d77-aae8-c3d55cc3996b"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL (₦)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="55" height="20" uuid="9d090ab5-aa7c-4bd8-844a-974835d1dfe3"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="0" width="55" height="20" uuid="9867eaf2-a2be-4c78-897c-307afdfe5490"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RETURN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="55" height="20" uuid="e1a955d6-807a-4832-870b-21e0dafada9c"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REMAIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="0" width="55" height="20" uuid="6f8135b4-e765-46da-914e-ece14462e8de"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="63" height="20" uuid="925fb18a-1ad5-4de9-bdea-76c7966f0d8b"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="0" width="61" height="20" uuid="6add8b2f-a1dd-4593-b07b-e9625274c39a"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="0" width="53" height="20" uuid="3456475d-b818-4d6f-81f5-9ade30478c68"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{productname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="0" width="43" height="20" uuid="341d9474-66f2-49ec-8adf-e7e109125389"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="55" height="20" uuid="32c07a87-a587-4700-bcb2-6dae11c25407"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{unitprice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="55" height="20" uuid="0ea7d8dd-25d5-4e69-a02f-0315021b841e"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{totalprice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="55" height="20" uuid="d456d481-d7b8-4d7c-be03-5fcad1488027"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="0" width="55" height="20" uuid="eb37a91c-2ace-40ce-8479-97f2765fde29"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{profit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="55" height="20" uuid="0865b037-c070-48f3-828a-09349a425543"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loss}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="0" width="55" height="20" uuid="b22b57a9-e216-4a5f-bb16-137cb71489c8"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{totalprofit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="20" uuid="02f1d4af-2293-4f3b-8bb2-e440b6f24704"/>
+				<text><![CDATA[Date Printed:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="0" width="131" height="20" uuid="e9e48ea6-999f-4a6f-9b26-2683f5dd679a"/>
+				<text><![CDATA[cc: hipo ventures]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="0" width="54" height="20" uuid="8ee21fc2-93a5-46f0-88d8-3aafacb5ef88"/>
+				<text><![CDATA[Printed by:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="63" y="0" width="102" height="20" uuid="6af90013-b376-4573-9b65-8f75d1305756"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="458" y="0" width="92" height="20" uuid="b103d7f2-0c4f-4bbb-a13c-6bcc07babcc7"/>
+				<textFieldExpression><![CDATA[$P{employee}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="11" splitType="Stretch"/>
+	</summary>
+</jasperReport>

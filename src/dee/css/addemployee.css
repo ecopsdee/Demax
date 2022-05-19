@@ -1,0 +1,16 @@
+
+.close-button:hover {
+    -fx-background-color:   #ff3333;
+}
+
+.jfx-button{
+    -fx-background-color:   #e3e7e3;
+}
+.jfx-button:hover{
+    -fx-background-color:  #9bd4f4;
+}
+
+.glyph-icon:hover{
+    -fx-fill: red;
+    
+}

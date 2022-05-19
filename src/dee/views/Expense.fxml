@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="invoicepane" prefHeight="364.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dee.controllers.ExpenseController">
+   <children>
+      <HBox prefHeight="9.0" prefWidth="948.0" style="-fx-background-color: #C0C0C0;" stylesheets="@../css/addemployee.css">
+         <children>
+            <Label contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #778989;" text=" Expenses" textAlignment="JUSTIFY" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <StackPane alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="1248.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <MaterialDesignIconView fx:id="close1" fill="WHITE" glyphName="WINDOW_CLOSE" onMouseClicked="#closeaction" size="30" />
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="304.0" prefWidth="948.0" spacing="5.0" style="-fx-background-color: #D3D3D3;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox fx:id="custidbody" alignment="CENTER" layoutX="10.0" layoutY="68.0" prefHeight="40.0" prefWidth="247.0" spacing="5.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Description:">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <JFXTextField fx:id="description" focusColor="BLACK" promptText="Description" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="custidbody1" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="247.0" spacing="5.0">
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="59.0" text="Price:">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <JFXTextField fx:id="price" focusColor="BLACK" promptText="Price" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="425.0" prefWidth="363.0" style="-fx-background-color: #D3D3D3;">
+                     <children>
+                        <JFXButton fx:id="_add" onAction="#add" prefHeight="29.0" prefWidth="74.0" stylesheets="@../css/invoice.css" text="Add">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="invoicetable" prefHeight="338.0" prefWidth="1170.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="describecol" prefWidth="75.0" text="Description" />
+                        <TableColumn fx:id="pricecol" prefWidth="75.0" text="Price" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="43.0" prefWidth="585.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <HBox.margin>
+                              <Insets right="60.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Total (N) :" textFill="#184380">
+                                 <font>
+                                    <Font name="Cambria Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalprice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="108.0" style="-fx-background-color: #C0C0C0;" />
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="_Save" layoutX="857.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#Save" stylesheets="@../css/invoice.css" text="Save">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="_clear" layoutX="802.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#clear" stylesheets="@../css/invoice.css" text="Clear">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

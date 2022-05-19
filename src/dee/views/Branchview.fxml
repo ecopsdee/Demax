@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dee.controllers.BranchviewController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="982.0" style="-fx-background-color: #151928;">
+         <children>
+            <Label text="Branch" textFill="#a0a2ab">
+               <font>
+                  <Font name="525icons" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="190.0" prefWidth="984.0" style="-fx-background-color: white;" stylesheets="@../css/subicons.css" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="91.0" prefWidth="984.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="createBranch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#opencreatebranch" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #0078D7;" text=" Branch Details" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
+                           </graphic>
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="branchsales" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#openbranchsales" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #107C10;" text=" Branch Sales" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
+                           </graphic>
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="branchexpense" layoutX="507.0" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#openbranchexpense" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #595959;" text=" Branch Expense" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
+                           </graphic>
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="77.0" prefWidth="984.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <JFXButton fx:id="branchreport" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#openbranchreport" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #0078D7;" text=" Branch Report" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
+                           </graphic>
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="77.0" prefWidth="984.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="982.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="Tips" textFill="#a0a2ab">
+               <font>
+                  <Font name="525icons" size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="216.0" prefWidth="908.0" style="-fx-background-color: #e3e3ea;" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="216.0" prefWidth="371.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="116.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="403.0" text="Click  on &quot;Branch Details&quot; to create a new Branch and its details inside the market.&#10;" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="116.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="403.0" text="Click  on &quot;Branch Sales&quot; to record all the sales of the branch in the market.&#10;&#10;" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="116.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="403.0" text="Click  on &quot;Branch Expense&quot; to record all the expense of the branch in the market.&#10;&#10;" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="216.0" prefWidth="433.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="403.0" text="Click  on &quot;Branch Report&quot; to get records of the goods in the branch.&#10;" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

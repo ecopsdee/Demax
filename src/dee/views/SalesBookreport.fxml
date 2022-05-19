@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="569.0" prefWidth="1045.0" style="-fx-background-color: #a0a2ab;" stylesheets="@../css/generalstyle.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dee.controllers.SalesBookreportController">
+   <children>
+      <HBox prefHeight="0.0" prefWidth="1258.0" style="-fx-background-color: #151928;">
+         <children>
+            <Label contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="168.0" style="-fx-background-color: #151928;" text="Invoice" textAlignment="JUSTIFY" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <StackPane alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="1248.0" stylesheets="@../css/close.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <MaterialDesignIconView fx:id="close" glyphName="WINDOW_CLOSE" onMouseClicked="#closeAction" size="30" />
+               </children>
+            </StackPane>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="84.0" prefWidth="605.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox prefHeight="84.0" prefWidth="311.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="77.0" prefWidth="126.0" HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER" prefHeight="84.0" prefWidth="26.0" />
+                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="121.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </VBox>
+            <HBox layoutX="15.0" layoutY="10.0" prefHeight="84.0" prefWidth="311.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="77.0" prefWidth="126.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER" prefHeight="84.0" prefWidth="26.0" />
+                  <HBox alignment="CENTER" prefHeight="58.0" prefWidth="121.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutX="326.0" layoutY="10.0" prefHeight="84.0" prefWidth="311.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="77.0" prefWidth="126.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER" prefHeight="84.0" prefWidth="26.0" />
+                  <HBox alignment="CENTER" prefHeight="58.0" prefWidth="121.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="_seegraph" onAction="#seegraph" style="-fx-background-radius: 7;" text="See Graph">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="LINE_CHART" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox layoutX="637.0" layoutY="10.0" prefHeight="84.0" prefWidth="311.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="77.0" prefWidth="126.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXTextField fx:id="total" focusColor="WHITE" prefHeight="25.0" prefWidth="120.0" promptText="Total" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="dailyreport" prefHeight="297.0" prefWidth="593.0" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="salesdate" prefWidth="121.39999389648438" text="date" />
+            <TableColumn fx:id="salesinvoice" prefWidth="121.39999389648438" text="invoice" />
+            <TableColumn fx:id="salesstock" prefWidth="159.615966796875" text="stock" />
+            <TableColumn fx:id="salesqty" prefWidth="99.61285400390625" text="qty" />
+            <TableColumn fx:id="salesunitprice" prefWidth="94.45819091796875" text="unit price" />
+            <TableColumn fx:id="salestotalprice" prefWidth="107.52008056640625" text="total price" />
+            <TableColumn fx:id="salesstatus" prefWidth="107.52008056640625" text="status" />
+            <TableColumn fx:id="salesqtyreturn" prefWidth="107.52008056640625" text="qty return" />
+            <TableColumn fx:id="salesqtyremain" prefWidth="107.52008056640625" text="qty remain" />
+            <TableColumn fx:id="salestotal" prefWidth="107.52008056640625" text="total" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="52.0" prefWidth="1207.0">
+         <children>
+            <JFXButton fx:id="receipt" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" onAction="#handleReceipt" prefHeight="37.0" prefWidth="97.0" style="-fx-background-radius: 10;" text="Receipt">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="PRINT" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ed4dd4b0-8f2b-46b1-8b91-334b05f6d1cf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="invoice" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="fromdate" class="java.lang.String"/>
+	<parameter name="todate" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="employee" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="177" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="92" height="88" uuid="a1c14063-adff-4fea-a66f-6879e1ddd4c0"/>
+			</image>
+			<staticText>
+				<reportElement x="372" y="88" width="183" height="59" uuid="fe7350c4-50d1-4dc0-9b7a-40b0a2b483c5"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Branch Office:
+C Line 7/9 Swali Market,
+Yenogoa, Bayelsa State.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="88" width="183" height="59" uuid="af4618ab-47fa-4947-a5b3-95f52a028714"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Head Office:
+Hipo Plaza, Zone 16, No.148
+Motorcycle Main Market
+Nnewi Anambra State.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="50" width="183" height="19" uuid="d1ed89ea-a86a-4414-b995-f7934d9edd70"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="463" height="50" uuid="3078d24f-6e6b-4e5d-86c9-e758d8baa1be"/>
+				<box>
+					<pen lineWidth="3.25" lineStyle="Solid"/>
+					<topPen lineWidth="3.25" lineStyle="Solid"/>
+					<leftPen lineWidth="3.25" lineStyle="Solid"/>
+					<bottomPen lineWidth="3.25" lineStyle="Solid"/>
+					<rightPen lineWidth="3.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="27" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUNCHO & COMPANY (NIG.) LTD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="50" width="183" height="19" uuid="18986f56-3c55-4f6e-8d85-cba7dbc4a4a7"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[TIN NO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="69" width="462" height="19" uuid="ff2bee8a-0d69-4148-aea2-85567d302f41"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="147" width="122" height="26" uuid="4aaba48d-6e67-4e8f-9207-52ebd369b7f8"/>
+				<box>
+					<pen lineWidth="2.0"/>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RETURN SALES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="62" width="63" height="20" uuid="3aa3a0af-73c3-4dcd-890c-e0e9cd0d8777"/>
+				<text><![CDATA[To Date:  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="0" width="47" height="20" uuid="cb920b06-1c37-4dad-b2d0-c67604debbd5"/>
+				<text><![CDATA[Total(₦):  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="20" uuid="216a9b1c-9ebe-483c-87e9-f843726694f6"/>
+				<text><![CDATA[Invoice:  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="31" width="63" height="20" uuid="631ab4cf-6cde-43d6-9d34-a805b3dbc5bc"/>
+				<text><![CDATA[From Date:  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="63" y="0" width="100" height="20" uuid="ab576ca0-2393-4a6c-ba17-0a9350ab83b5"/>
+				<textFieldExpression><![CDATA[$P{invoice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="100" height="20" uuid="a6cc0a2d-33d8-4753-ae82-bdfd8b1b6199"/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="31" width="100" height="20" uuid="6b2ca89f-34d3-4251-a751-7e6e2d167eb9"/>
+				<textFieldExpression><![CDATA[$P{fromdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="62" width="100" height="20" uuid="a3134c67-fe05-4b60-b4b3-422727a252a5"/>
+				<textFieldExpression><![CDATA[$P{todate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="63" y="20" width="100" height="1" uuid="f51550fd-40dc-4109-9f0f-23172d45f423"/>
+			</line>
+			<line>
+				<reportElement x="220" y="19" width="100" height="1" uuid="a4413704-ebfe-47b8-ad50-5599a50de06e"/>
+			</line>
+			<line>
+				<reportElement x="63" y="50" width="100" height="1" uuid="f9ee7e23-4db9-47df-b4eb-2b7772699a86"/>
+			</line>
+			<line>
+				<reportElement x="63" y="81" width="100" height="1" uuid="011a831b-2514-40c3-bd32-924c9121ad67"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="218" y="0" width="131" height="20" uuid="f0b4bc84-de84-4acf-ac68-077c853b2815"/>
+				<text><![CDATA[cc: hipo ventures]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="54" height="20" uuid="54bcb934-6a9c-46a9-a134-e032886aef7d"/>
+				<text><![CDATA[Printed by:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="20" uuid="aa030d95-c214-4cfb-89fa-f0018a507c61"/>
+				<text><![CDATA[Date Printed:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="63" y="0" width="100" height="20" uuid="1e4404c1-d340-4711-9d69-e145ece42af6"/>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="0" width="90" height="20" uuid="7b41a3e5-dad9-4abe-bae9-77fe5ce73641"/>
+				<textFieldExpression><![CDATA[$P{employee}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

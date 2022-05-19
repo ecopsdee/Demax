@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dee.controllers.StockviewController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="982.0" style="-fx-background-color: #151928;">
+         <children>
+            <Label text=" Stock" textFill="#a0a2ab">
+               <font>
+                  <Font name="525icons" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="190.0" prefWidth="984.0" style="-fx-background-color: white;" stylesheets="@../css/subicons.css" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="addwarehouse" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#openwarehouse" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #0078D7;" text="Add Warehouse" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PRODUCT_HUNT" size="30" />
+                           </graphic>
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addproduct" layoutX="376.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#openproduct" prefHeight="48.0" prefWidth="193.0" style="-fx-background-color: #107C10;" text="Add Product " textFill="WHITE">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="productprice" layoutX="501.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#addprice" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #505050;" text="Add  Price" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PERCENT" size="28" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="addimports" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#imports" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #F68A1E;" text="Imports" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PRODUCT_HUNT" size="30" />
+                           </graphic>
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addwarehouseorder" layoutX="376.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onAction="#warehouseorder" prefHeight="48.0" prefWidth="193.0" style="-fx-background-color: #107C10;" text="Warehouse Order" textFill="WHITE">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="30" text="" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="982.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="Tips" textFill="#a0a2ab">
+               <font>
+                  <Font name="525icons" size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="216.0" prefWidth="908.0" style="-fx-background-color: #e3e3ea;" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="216.0" prefWidth="371.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="116.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="PRODUCT_HUNT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="403.0" text="Click  on &quot;Add Warehouse&quot; to add the details of a particular warehouse&#10;" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="431.0" text="Click  on &quot;Add Product&quot; to add the Product sold in the company&#10;" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="125.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="431.0" text="Click  on &quot;Warehouse Order&quot; to record all stock taken from the warehouse&#10;&#10;" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="216.0" prefWidth="433.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="PERCENT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="431.0" text="Click  on &quot;Add Price&quot; to add the prices of all the product in the store. " wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="PRODUCT_HUNT" size="30" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="431.0" text="Click  on &quot;Imports&quot; to record new goods coming into the comapny" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

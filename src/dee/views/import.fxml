@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="1208.0" style="-fx-background-color: #a0a2ab;" stylesheets="@../css/generalstyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dee.controllers.ImportController">
+   <children>
+      <HBox prefHeight="0.0" prefWidth="1258.0" style="-fx-background-color: #151928;">
+         <children>
+            <Label contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="146.0" style="-fx-background-color: #151928;" text="Import" textAlignment="JUSTIFY" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <StackPane alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="1248.0" stylesheets="@../css/close.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <MaterialDesignIconView fx:id="close" glyphName="WINDOW_CLOSE" onMouseClicked="#closeAction" size="30" />
+               </children>
+            </StackPane>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="1011.0" spacing="2.0">
+               <children>
+                  <TilePane alignment="CENTER" layoutX="392.0" layoutY="10.0" prefHeight="85.0" prefWidth="157.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Warehouse:" textFill="WHITE" TilePane.alignment="CENTER" />
+                        <JFXComboBox fx:id="wname" focusColor="WHITE" onAction="#getwarehouse" prefHeight="25.0" prefWidth="139.0" unFocusColor="#151928" />
+                     </children>
+                  </TilePane>
+                  <TilePane alignment="CENTER" prefHeight="85.0" prefWidth="162.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Model:" textFill="WHITE" TilePane.alignment="CENTER" />
+                        <HBox alignment="CENTER" spacing="4.0" stylesheets="@../css/import.css">
+                           <children>
+                              <JFXComboBox fx:id="pname" focusColor="WHITE" prefHeight="25.0" prefWidth="139.0" unFocusColor="#151928" />
+                              <FontAwesomeIconView fx:id="help_button" glyphName="QUESTION" onMouseClicked="#Help" size="20" styleClass="glyph-icon" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </TilePane>
+                  <TilePane alignment="CENTER" layoutX="649.0" layoutY="10.0" prefHeight="85.0" prefWidth="172.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Qty(Carton):" textFill="WHITE" TilePane.alignment="CENTER" />
+                        <JFXTextField fx:id="noofcart" focusColor="WHITE" unFocusColor="#151928" />
+                     </children>
+                  </TilePane>
+                  <TilePane alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="85.0" prefWidth="157.0">
+                     <children>
+                        <Label prefWidth="80.0" text="Status:" textFill="WHITE" TilePane.alignment="CENTER" />
+                        <JFXComboBox fx:id="status" focusColor="WHITE" onAction="#getstatus" prefHeight="25.0" prefWidth="139.0" unFocusColor="#151928" />
+                     </children>
+                  </TilePane>
+                  <TilePane alignment="CENTER" layoutX="775.0" layoutY="10.0" prefHeight="85.0" prefWidth="153.0">
+                     <children>
+                        <JFXButton fx:id="_add" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" onAction="#add" prefHeight="21.0" prefWidth="97.0" style="-fx-background-radius: 10;" text="Add">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PLUS" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </TilePane>
+                  <TilePane alignment="CENTER" layoutX="507.0" layoutY="10.0" prefHeight="85.0" prefWidth="216.0">
+                     <children>
+                        <TextArea fx:id="help_area" prefHeight="26.0" prefWidth="96.0" wrapText="true">
+                           <font>
+                              <Font name="525icons" size="18.0" />
+                           </font></TextArea>
+                     </children>
+                  </TilePane>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXDatePicker fx:id="date" defaultColor="WHITE" editable="false" promptText="Date" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="importtable" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="wnamecol" prefWidth="75.0" text="Warehouse" />
+                        <TableColumn fx:id="pnamecol" prefWidth="75.0" text="Model" />
+                        <TableColumn fx:id="noofcartcol" prefWidth="75.0" text="Qty" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1011.0">
+               <children>
+                  <TilePane alignment="CENTER" hgap="8.0" prefHeight="95.0" prefWidth="248.0">
+                     <children>
+                        <JFXButton fx:id="_clear" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" onAction="#clear" prefHeight="20.0" prefWidth="97.0" style="-fx-background-radius: 10;" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="REMOVE" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="_save" layoutX="86.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" onAction="#save" prefHeight="13.0" prefWidth="97.0" style="-fx-background-radius: 10;" text="Save">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SAVE" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </TilePane>
+                  <TilePane alignment="CENTER" layoutX="358.0" layoutY="10.0" prefHeight="50.0" prefWidth="241.0">
+                     <children>
+                        <Label text="Total (Qty)" textFill="WHITE" />
+                        <Label fx:id="totalqty" alignment="CENTER" layoutX="57.0" layoutY="27.0" prefHeight="23.0" prefWidth="103.0" style="-fx-background-color: #151928;" textFill="WHITE" />
+                     </children>
+                  </TilePane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
